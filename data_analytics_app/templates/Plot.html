@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block content %}
+<div class="row p-4">
+  <div class="card m-auto" style="width: 90%">
+    <div id="chart2"></div>
+    <p>
+      tvweygi ugefoug gfgeb HIIHWPH GOWEDLHI ihwwfywrh uugugwofhgiof
+      gqgowefogeof wewfgeofheipfh hifh ggfowofg ugwbflg iugfbflo jccdciho
+      sgboggb hppcbsugwbffoguf
+    </p>
+  </div>
+</div>
+<script>
+
+  var graph1 = {{ graph2_json | safe }};
+  Plotly.plot("chart2", graph1, {});
+</script>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container mt-5">
+  <h1 class="mb-4">Compute Operation</h1>
+
+  <form
+    action="{{ url_for('perform_compute', id=dataset.id) }}"
+    method="POST"
+    class="mb-4"
+  >
+    <div class="form-group">
+      <label for="selected_column">Select column:</label>
+      <select name="selected_column" id="selected_column" class="form-control">
+        {% for column_name in column_names %}
+        <option value="{{ column_name }}">{{ column_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="operation">Select operation:</label>
+      <select name="operation" id="operation" class="form-control">
+        <option value="sum">Sum</option>
+        <option value="min">Min</option>
+        <option value="max">Max</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Compute</button>
+  </form>
+
+  {% if result is not none %}
+  <!-- Display result if it exists -->
+  <div class="mb-4">
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+  </div>
+  {% endif %}
+
+  <hr />
+
+  <form
+    action="{{ url_for('perform_plot', id=dataset.id) }}"
+    method="GET"
+    class="mb-4"
+  >
+    <div class="form-group">
+      <label for="selected_column1">Select column:1</label>
+      <select
+        name="selected_column1"
+        id="selected_column1"
+        class="form-control"
+      >
+        {% for column_name in column_names %}
+        <option value="{{ column_name }}">{{ column_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="selected_column2">Select column:2</label>
+      <select
+        name="selected_column2"
+        id="selected_column2"
+        class="form-control"
+      >
+        {% for column_name in column_names %}
+        <option value="{{ column_name }}">{{ column_name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Plot</button>
+  </form>
+  {% if values_column1 %}
+  <div id="myPlot" style="width: 100%; height: 100%"></div>
+  <script src="{{ url_for('static', filename='scripts/bubbleplot.js') }}"></script>
+  <script>
+    // Call the Bubbleplot function after the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      Bubbleplot({{values_column1}}, {{values_column2}});
+    });
+  </script>
+
+  {% endif %} {% endblock %}
+</div>

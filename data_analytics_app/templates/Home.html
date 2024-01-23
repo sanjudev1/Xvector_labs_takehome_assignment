@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block content %}
+<h1 class="text-center text-success mb-4">Home Page Section</h1>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card p-4">
+      <h2 class="text-center text-primary mb-3">Dataset List</h2>
+      <ul class="list-group">
+        {% for dataset in datasets %}
+        <li class="list-group-item">
+          <a href="{{ url_for('compute_dataset', id=dataset.id) }}"
+            >{{ dataset.name }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center mt-4">
+  <div class="col-md-6">
+    <form
+      action="{{ url_for('dataset') }}"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="return validateForm()"
+    >
+      <div class="mb-3">
+        <label for="fileInput" class="form-label">Choose File</label>
+        <input type="file" name="file" id="fileInput" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="filename" class="form-label">Enter Filename</label>
+        <input
+          type="text"
+          name="filename"
+          id="filename"
+          placeholder="Enter filename"
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='scripts/formvalidation.js') }}"></script>
+{% endblock %}
