@@ -12,3 +12,11 @@
 .p-4 { padding:  4px;  }
 .row { display: flex; flex-direction: row; }
 .text-center { text-align: center; }
+/* apply result */
+.app-reset { padding:  0px;  margin:  0px;  box-sizing: content-box;  }
+.mid { display: flex; align-items: center;  }
+.center { display: flex; justify-content: center;  }
+.mid-center { display: flex; justify-content: center; align-items: center;  }
+.mid-between { display: flex; justify-content: space-between; align-items: center;  }
+.mid-around { display: flex; justify-content: space-around; align-items: center;  }
+.mid-evenly { display: flex; justify-content: space-evenly; align-items: center;  }
