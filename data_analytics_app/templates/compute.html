@@ -1,87 +1,48 @@
 {% extends "layout.html" %} {% block content %}
+<h1 class="text-center text-success mb-4">Upload Data Assets</h1>
 
-<form
-  action="{{ url_for('dataset') }}"
-  method="POST"
-  enctype="multipart/form-data"
->
-  <input type="file" name="file" id="fileInput" />
-  <input
-    type="text"
-    name="filename"
-    id="filename"
-    placeholder="Enter filename"
-  />
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card p-4">
+      <h2 class="text-center text-primary mb-3">Dataset List</h2>
+      <ul class="list-group">
+        {% for dataset in datasets %}
+        <li class="list-group-item">
+          <a href="{{ url_for('compute_dataset', id=dataset.id) }}"
+            >{{ dataset.name }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <!-- Display uploaded files in dropdowns -->
-
-  <!-- Dropdown for operation selection -->
-
-  <label for="operation">Select operation:</label>
-  <select name="operation">
-    <option value="sum">Sum</option>
-    <option value="min">Min</option>
-    <option value="max">Max</option>
-  </select>
-
-  <label for="selectedColumn">Select a column:</label>
-  <select name="selectedColumn">
-    {% for key in column_options %}
-    <option value="{{ key }}">{{ key }}</option>
-    {% endfor %}
-  </select>
-  <!-- Add a 'name' attribute to the filename input -->
-
-  <input type="submit" value="Compute and Plot" />
-</form>
-{% if result %}
-<h1>{{ result }}</h1>
-{% endif %} {% if data and selected_column %}
-<table border="1">
-  <tr>
-    {% for key in data[0].keys() %}
-    <th>{{ key }}</th>
-    {% endfor %}
-  </tr>
-
-  {% for row in data %}
-  <tr>
-    {% for value in row.values() %}
-    <td>{{ value }}</td>
-    {% endfor %}
-  </tr>
-  {% endfor %}
-</table>
-
-<div id="myPlot" style="width: 100%; height: 100%"></div>
-
-<script>
-  const xArray = Array.from({ length: {{ data|length }}}, (_, i) => i + 1);  // Generate a sequence of integers
-  const yArray = {{ data|tojson|safe }}.map((row) => parseInt(row['{{selected_column}}'])); // Extract values from the selected column
-
-  const colors = ['red', 'green', 'blue', 'orange', 'pink', 'white', 'yellow'];
-  const trace1 = {
-    x: xArray,
-    y: yArray,
-    mode: 'markers',
-    margin: { t: -10, l: 0, r: 0, b: 10},
-    marker: {
-      color: Array.from(
-        { length: xArray.length },
-        (_, i) => colors[i % colors.length]
-      ),
-      size: Array.from({ length: xArray.length }, (_, i) => (i + 1) * 10),
-    },
-  };
-
-  const dataForPlotly = [trace1];
-
-  const layout = {
-    title: 'Plotting Bubbles',
-  };
-
-  Plotly.newPlot('myPlot', dataForPlotly, layout);
-</script>
-{% else %}
-<p>No data or selected column to display.</p>
-{% endif %} {% endblock %}
+<div class="row justify-content-center mt-4">
+  <div class="col-md-6">
+    <form
+      action="{{ url_for('dataset') }}"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="return validateForm()"
+    >
+      <div class="mb-3">
+        <label for="fileInput" class="form-label">Choose File</label>
+        <input type="file" name="file" id="fileInput" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="filename" class="form-label">Enter Filename</label>
+        <input
+          type="text"
+          name="filename"
+          id="filename"
+          placeholder="Enter filename"
+          class="form-control"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='scripts/formvalidation.js') }}"></script>
+{% endblock %}

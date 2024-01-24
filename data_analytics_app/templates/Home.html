@@ -1,48 +1,20 @@
 {% extends "layout.html" %} {% block content %}
-<h1 class="text-center text-success mb-4">Home Page Section</h1>
 
-<div class="row justify-content-center">
-  <div class="col-md-8">
-    <div class="card p-4">
-      <h2 class="text-center text-primary mb-3">Dataset List</h2>
-      <ul class="list-group">
-        {% for dataset in datasets %}
-        <li class="list-group-item">
-          <a href="{{ url_for('compute_dataset', id=dataset.id) }}"
-            >{{ dataset.name }}</a
-          >
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+/>
 
-<div class="row justify-content-center mt-4">
-  <div class="col-md-6">
-    <form
-      action="{{ url_for('dataset') }}"
-      method="POST"
-      enctype="multipart/form-data"
-      onsubmit="return validateForm()"
-    >
-      <div class="mb-3">
-        <label for="fileInput" class="form-label">Choose File</label>
-        <input type="file" name="file" id="fileInput" class="form-control" />
-      </div>
-      <div class="mb-3">
-        <label for="filename" class="form-label">Enter Filename</label>
-        <input
-          type="text"
-          name="filename"
-          id="filename"
-          placeholder="Enter filename"
-          class="form-control"
-        />
-      </div>
-      <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
-  </div>
-</div>
-<script src="{{ url_for('static', filename='scripts/formvalidation.js') }}"></script>
+<section>
+  <h3>Discover and capture value from data in days, not in months or years.</h3>
+
+  <h2>A Unified Analytics Platform</h2>
+  <p>Connect, enrich, visualize, model, and consume insights from data.</p>
+  <img
+    src="https://assets.everspringpartners.com/dims4/default/c65c8ef/2147483647/strip/true/crop/620x250+0+0/resize/620x250!/format/webp/quality/90/?url=http%3A%2F%2Feverspring-brightspot.s3.us-east-1.amazonaws.com%2Fe4%2F2a%2Fe9a3904c4f17a084c100bbbb5eca%2Fdata-visualization-for-accountants-620x250.jpg"
+    alt="Placeholder Image"
+  />
+</section>
+
+<footer>&copy; 2024 XVector Labs. All rights reserved.</footer>
 {% endblock %}

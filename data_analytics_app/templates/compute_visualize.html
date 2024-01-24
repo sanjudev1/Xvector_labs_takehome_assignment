@@ -30,9 +30,10 @@
 
   {% if result is not none %}
   <!-- Display result if it exists -->
-  <div class="mb-4">
-    <h2>Result:</h2>
-    <p>{{ result }}</p>
+  <div class="card mb-1">
+    <div class="card-body">
+      <p class="card-text text-success">Result is {{ result }}</p>
+    </div>
   </div>
   {% endif %}
 

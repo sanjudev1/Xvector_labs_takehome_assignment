@@ -1,0 +1,10 @@
+body {
+  padding-top: 56px;
+  margin-bottom: 100px; /* Adjust the padding based on your navbar height */
+}
+
+main.container {
+  min-height: calc(
+    100vh - 56px
+  ); /* Adjust the subtraction based on your navbar height */
+}

@@ -15,18 +15,10 @@
     {% else %}
     <title>Data Visualization App</title>
     {% endif %}
-    <style>
-      body {
-        padding-top: 56px;
-        margin-bottom: 100px; /* Adjust the padding based on your navbar height */
-      }
-
-      main.container {
-        min-height: calc(
-          100vh - 56px
-        ); /* Adjust the subtraction based on your navbar height */
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/layout.css') }}"
+    />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -45,14 +37,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="/">Home</a>
+          <li
+            class="nav-item {% if 'home' in request.endpoint %}active{% endif %}"
+          >
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/compute">Compute</a>
+          <li
+            class="nav-item {% if 'compute' in request.endpoint %}active{% endif %}"
+          >
+            <a class="nav-link" href="{{ url_for('compute') }}"
+              >Asserts Upload</a
+            >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/plot">Plot</a>
+          <li
+            class="nav-item {% if 'plot' in request.endpoint %}active{% endif %}"
+          >
+            <a class="nav-link" href="{{ url_for('plot') }}">Plot</a>
           </li>
         </ul>
       </div>

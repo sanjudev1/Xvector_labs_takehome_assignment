@@ -13,11 +13,14 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+
+#database configuration 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
 
 #Currently it Supports csv files
 ALLOWED_EXTENSIONS = {'csv', 'xls', 'xlsx', 'pdf'}
+
 
 class Dataset(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -27,16 +30,19 @@ class Dataset(db.Model):
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route("/")
-def home():
+#it gives list of all files in the db
+@app.route("/compute")
+def compute():
     datasets = Dataset.query.all()
     #serve the db data to the home page
-    return render_template("Home.html",title="Home",datasets=datasets)
+    return render_template("compute.html",title="uploadAsserts",datasets=datasets)
 
-@app.route('/compute')
-def index():
-    return render_template('compute.html')
+#home page 
+@app.route('/')
+def home():
+    return render_template('Home.html')
 
+#check the delimiters for edge cases
 def read_dataframe_from_dataset(selected_dataset):
     # Define a list of potential delimiters to try
     potential_delimiters = [',',';','/']  # Add more delimiters if needed
@@ -55,6 +61,7 @@ def read_dataframe_from_dataset(selected_dataset):
     raise ValueError("Unable to determine the delimiter for the dataset")
 
 
+#compute for filtered integer columns
 @app.route('/dataset/<int:id>/compute', methods=['GET'])
 def compute_dataset(id):
     # Fetch the dataset from the database using the provided id
@@ -68,6 +75,7 @@ def compute_dataset(id):
 
     return render_template('compute_visualize.html', dataset=selected_dataset, column_names=integer_columns)
 
+# Get up to 30 columns from the db
 @app.route('/dataset/<int:id>/plot', methods=['GET'])
 def perform_plot(id):
       # Fetch the dataset from the database using the provided id
@@ -87,6 +95,7 @@ def perform_plot(id):
     
     return render_template('compute_visualize.html', dataset=selected_dataset, values_column1=values_column1,values_column2=values_column2,column_names=integer_columns)
 
+#compute operations sum or min or max of selected column
 @app.route('/dataset/<int:id>/compute', methods=['POST'])
 def perform_compute(id):
     # Fetch the dataset from the database using the provided id
@@ -115,6 +124,7 @@ def perform_compute(id):
 
     return render_template('compute_visualize.html', dataset=selected_dataset, column_name=selected_column, operation=selected_operation, result=result,column_names=integer_columns)
 
+#upload the dataset to the database (postgres)
 @app.route('/dataset', methods=['POST'])
 def dataset():
     if 'file' not in request.files:
@@ -126,7 +136,7 @@ def dataset():
 
     filename = request.form['filename']
     save_uploaded_file(file, filename)
-    return redirect(url_for('home'))
+    return redirect(url_for('compute'))
       
 def read_csv(csv_file):
     # Wrap the file in TextIOWrapper to ensure it's opened in text mode
@@ -161,7 +171,7 @@ def save_uploaded_file(file, filename):
         
 
 
-
+#this is testing purpose to plot 3 dimensional graph
 @app.route("/plot")
 def plot():
     df=px.data.iris()
