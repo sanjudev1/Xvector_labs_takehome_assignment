@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     {% if title %}
     <title>Data Visualization {{title}}</title>
     {% else %}
@@ -53,6 +54,11 @@
             class="nav-item {% if 'plot' in request.endpoint %}active{% endif %}"
           >
             <a class="nav-link" href="{{ url_for('plot') }}">Plot</a>
+          </li>
+          <li
+            class="nav-item {% if 'graph' in request.endpoint %}active{% endif %}"
+          >
+            <a class="nav-link" href="{{ url_for('graph') }}">graph</a>
           </li>
         </ul>
       </div>

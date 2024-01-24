@@ -1,5 +1,5 @@
 from data_analytics_app import app 
-from flask import render_template,url_for,request,redirect
+from flask import render_template,url_for,request,redirect,jsonify
 import pandas as pd 
 import json 
 import  plotly 
@@ -11,6 +11,7 @@ from flask_sqlalchemy import SQLAlchemy
 from io import StringIO
 from dotenv import load_dotenv
 import os
+from numpy import int64
 
 load_dotenv()
 
@@ -37,6 +38,11 @@ def compute():
     #serve the db data to the home page
     return render_template("compute.html",title="uploadAsserts",datasets=datasets)
 
+@app.route("/graph")
+def graph():
+    datasets = Dataset.query.all()
+    #serve the db data to the home page
+    return render_template("visualization.html",title="graph",datasets=datasets)
 #home page 
 @app.route('/')
 def home():
@@ -62,18 +68,31 @@ def read_dataframe_from_dataset(selected_dataset):
 
 
 #compute for filtered integer columns
+
 @app.route('/dataset/<int:id>/compute', methods=['GET'])
 def compute_dataset(id):
-    # Fetch the dataset from the database using the provided id
-    selected_dataset = Dataset.query.get_or_404(id)
+    try:
+        # Fetch the dataset from the database using the provided id
+        selected_dataset = Dataset.query.get_or_404(id)
 
-    # Convert the CSV data string to a DataFrame
-    df = read_dataframe_from_dataset(selected_dataset)
-    integer_columns = df.select_dtypes(include='number').columns
-    # Get the column names from the DataFrame
-    column_names = list(df.columns)
+        # Convert the CSV data string to a DataFrame
+        df = read_dataframe_from_dataset(selected_dataset)
+        integer_columns = df.select_dtypes(include='number').columns
 
-    return render_template('compute_visualize.html', dataset=selected_dataset, column_names=integer_columns)
+        # Check if the request is an AJAX request
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            # If it's an AJAX request, return JSON
+            response_data = {'integer_columns': list(integer_columns)}
+            print('Response Data:', response_data)  # Add this line for debugging
+            return jsonify(response_data)
+        else:
+            # If it's not an AJAX request, render the template
+            column_names = list(df.columns)
+            return render_template('compute_visualize.html', dataset=selected_dataset, column_names=integer_columns)
+    except Exception as e:
+        # Log the error for debugging purposes
+        print(f"An error occurred: {str(e)}")
+        return jsonify({'error': 'An error occurred on the server'}), 500
 
 # Get up to 30 columns from the db
 @app.route('/dataset/<int:id>/plot', methods=['GET'])
@@ -90,7 +109,11 @@ def perform_plot(id):
     selected_column2 = request.args.get('selected_column2')
     values_column1 = df[selected_column1].head(30).tolist()
     values_column2 = df[selected_column2].head(30).tolist()
-   
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            # If it's an AJAX request, return JSON
+            response_data = {'values_column1': values_column1,'values_column2':values_column2}
+            print('Response Data:', response_data)  # Add this line for debugging
+            return jsonify(response_data)
     # Perform the operation based on user input
     
     return render_template('compute_visualize.html', dataset=selected_dataset, values_column1=values_column1,values_column2=values_column2,column_names=integer_columns)
@@ -107,7 +130,6 @@ def perform_compute(id):
     # Get the selected column and operation from the form submission
     selected_column = request.form.get('selected_column')
     selected_operation = request.form.get('operation')
-    
     column_names = list(df.columns)
     integer_columns = df.select_dtypes(include='number').columns
 
@@ -121,7 +143,12 @@ def perform_compute(id):
         result = df[selected_column].max()
     else:
         result = None  # Handle invalid operation gracefully
-
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        if isinstance(result, int64):
+            # Convert numpy int64 to Python int
+            result = int(result)
+        return jsonify({'result': result})
+    
     return render_template('compute_visualize.html', dataset=selected_dataset, column_name=selected_column, operation=selected_operation, result=result,column_names=integer_columns)
 
 #upload the dataset to the database (postgres)

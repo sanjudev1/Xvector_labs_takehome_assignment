@@ -1,0 +1,153 @@
+{% extends "layout.html" %} {% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<div>
+  <label for="selected_data1">Select Data:1</label>
+  <select name="selected_data1" id="selected_data1" class="form-control">
+    {% for dataset in datasets %}
+    <option value="{{ dataset.id }}">{{ dataset.name }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<div id="result-container">
+  <!-- The result of the compute_dataset function will be displayed here -->
+  <label for="result-list">Column:</label>
+  <select id="result-list" class="form-control result-select"></select>
+</div>
+<div class="form-group">
+  <label for="operation">Select operation:</label>
+  <select name="operation" id="operation" class="form-control">
+    <option value="sum">Sum</option>
+    <option value="min">Min</option>
+    <option value="max">Max</option>
+  </select>
+</div>
+<button id="compute-btn">compute</button>
+<div id="computation-result"></div>
+<hr />
+<div>
+  <label for="selected_data2">Select Data:2</label>
+  <select name="selected_data2" id="selected_data2" class="form-control">
+    {% for dataset in datasets %}
+    <option value="{{ dataset.id }}">{{ dataset.name }}</option>
+    {% endfor %}
+  </select>
+</div>
+<div id="result-container1">
+  <!-- The result of the compute_dataset function will be displayed here -->
+  <label for="result-list1">Column1:</label>
+  <select id="result-list1" class="form-control result-select"></select>
+</div>
+<div id="result-container2">
+  <!-- The result of the compute_dataset function will be displayed here -->
+  <label for="result-list2">Columns2:</label>
+  <select id="result-list2" class="form-control result-select"></select>
+</div>
+<button id="plot-btn">Plot</button>
+<div id="myPlot" style="width: 100%; height: 100%"></div>
+<script src="{{ url_for('static', filename='scripts/bubbleplot.js') }}"></script>
+<script>
+  $(document).ready(function () {
+    // Bind the change event
+
+    function fetchmethod(selectedId, selected_data) {
+      $.ajax({
+        url: '/dataset/' + selectedId + '/compute',
+        type: 'GET',
+        success: function (data) {
+          console.log('Received data:', data);
+
+          // Clear the existing options
+
+          // Construct the HTML string for all options
+          var optionsHtml = '';
+          $.each(data.integer_columns, function (index, item) {
+            optionsHtml += '<option value="' + item + '">' + item + '</option>';
+          });
+
+          // Append the HTML string to the select dropdown
+          if (selected_data === 'selected_data1') {
+            $('#result-list').empty();
+            $('#result-list').append(optionsHtml);
+          } else if (selected_data === 'selected_data2') {
+            $('#result-list1').empty();
+            $('#result-list2').empty();
+            $('#result-list1').append(optionsHtml);
+            $('#result-list2').append(optionsHtml);
+          }
+        },
+        error: function (error) {
+          console.error('Error fetching data:', error);
+          // Handle the error, e.g., display an alert
+        },
+      });
+    }
+    $('#selected_data1').on('change', function () {
+      var selectedId = $(this).val();
+      fetchmethod(selectedId, 'selected_data1');
+    });
+    $('#selected_data2').on('change', function () {
+      var selectedId = $(this).val();
+      fetchmethod(selectedId, 'selected_data2');
+    });
+
+    // Trigger the change event on page load for the initially selected option
+
+    $('#selected_data1').trigger('change');
+    $('#selected_data2').trigger('change');
+    // Bind the click event handler for compute-btn
+    // Bind the click event handler for compute-btn
+
+    $('#compute-btn').on('click', function () {
+      var selectedColumn = $('#result-list :selected').val();
+      var selectedOperation = $('#operation').val();
+      var selectedId = $('#selected_data1').val();
+
+      // Perform the computation based on selectedColumn and selectedOperation
+      $.ajax({
+        url: '/dataset/' + selectedId + '/compute',
+        type: 'POST',
+        data: {
+          selected_column: selectedColumn,
+          operation: selectedOperation,
+        },
+        success: function (data) {
+          console.log('Computation result:', data.result);
+          $('#computation-result').text('Computation Result: ' + data.result);
+          // Handle the result as needed, e.g., display it on the page
+        },
+        error: function (error) {
+          console.error('Error performing computation:', error);
+          // Handle the error, e.g., display an alert
+        },
+      });
+    });
+
+    $('#plot-btn').on('click', function () {
+      var selectedColumn1 = $('#result-list1 :selected').val();
+      var selectedColumn2 = $('#result-list2 :selected').val();
+      var selectedId = $('#selected_data2').val();
+
+      // Perform the computation based on selectedColumn and selectedOperation
+      $.ajax({
+        url: '/dataset/' + selectedId + '/plot',
+        type: 'GET',
+        data: {
+          selected_column1: selectedColumn1,
+          selected_column2: selectedColumn2,
+        },
+        success: function (data) {
+          console.log('Computation result:', data);
+          Bubbleplot(data.values_column1, data.values_column2);
+          // Handle the result as needed, e.g., display it on the page
+        },
+        error: function (error) {
+          console.error('Error performing computation:', error);
+          // Handle the error, e.g., display an alert
+        },
+      });
+    });
+  });
+</script>
+
+{% endblock %}
