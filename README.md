@@ -69,8 +69,8 @@ To run the project locally, follow these steps:
 
 ## Issues Faced
 
-# Example of using app_context() to handle database connections
-# Utilize the internal database URL during deployment on the Render platform.
+ - Example of using app_context() to handle database connections
+ - Utilize the internal database URL during deployment on the Render platform.
 
 ## Contact
 
