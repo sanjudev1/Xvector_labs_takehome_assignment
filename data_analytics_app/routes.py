@@ -111,12 +111,11 @@ def perform_plot(id):
     values_column2 = df[selected_column2].head(30).tolist()
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
             # If it's an AJAX request, return JSON
-            response_data = {'values_column1': values_column1,'values_column2':values_column2}
-            print('Response Data:', response_data)  # Add this line for debugging
+            response_data = {'values_column1': values_column1,'values_column2':values_column2,'selected_column1':selected_column1,'selected_column2':selected_column2}
             return jsonify(response_data)
     # Perform the operation based on user input
     
-    return render_template('compute_visualize.html', dataset=selected_dataset, values_column1=values_column1,values_column2=values_column2,column_names=integer_columns)
+    return render_template('compute_visualize.html', dataset=selected_dataset, values_column1=values_column1,values_column2=values_column2,column_names=integer_columns,selected_column1=selected_column1,selected_column2=selected_column2)
 
 #compute operations sum or min or max of selected column
 @app.route('/dataset/<int:id>/compute', methods=['POST'])
@@ -158,9 +157,9 @@ def dataset():
         return "No file provided"
 
     file = request.files['file']
+    
     if file.filename == '':
         return "No file selected"
-
     filename = request.form['filename']
     save_uploaded_file(file, filename)
     return redirect(url_for('compute'))
@@ -168,11 +167,10 @@ def dataset():
 def read_csv(csv_file):
     # Wrap the file in TextIOWrapper to ensure it's opened in text mode
     csv_file_wrapper = TextIOWrapper(csv_file, encoding='utf-8')
-
     csv_reader = csv.DictReader(csv_file_wrapper, delimiter=';')
     data = [row for row in csv_reader]
-
     return data
+
 # Helper functions
 def save_uploaded_file(file, filename):
     try:
@@ -196,8 +194,7 @@ def save_uploaded_file(file, filename):
         db.session.rollback()
         return "Error saving file"       
         
-
-
+        
 #this is testing purpose to plot 3 dimensional graph
 @app.route("/plot")
 def plot():

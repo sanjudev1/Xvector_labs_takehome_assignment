@@ -1,0 +1,15 @@
+/* Custom styling for labels */
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Custom styling for select dropdowns */
+.form-control {
+  border-radius: 5px;
+}
+
+/* Custom styling for buttons */
+.btn-custom {
+  font-weight: bold;
+}
