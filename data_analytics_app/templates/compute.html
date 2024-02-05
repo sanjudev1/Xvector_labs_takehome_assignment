@@ -8,9 +8,7 @@
       <ul class="list-group">
         {% for dataset in datasets %}
         <li class="list-group-item">
-          <a href="{{ url_for('compute_dataset', id=dataset.id) }}"
-            >{{ dataset.name }}</a
-          >
+          <a href="">{{ dataset }}</a>
         </li>
         {% endfor %}
       </ul>

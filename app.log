@@ -1,0 +1,246 @@
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:14] "[35m[1mGET /compute HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:14] "[36mGET /compute?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:14] "[36mGET /compute?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:15] "[36mGET /compute?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:15] "[36mGET /compute?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\sanja\\x_vectorlabs\\data_analytics_app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 556-405-431
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:50] "[35m[1mGET /compute HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:50] "[36mGET /compute?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:50] "[36mGET /compute?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:50] "[36mGET /compute?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:51] "[36mGET /compute?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:57] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:03:57] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:00] "[35m[1mGET /compute HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:00] "[36mGET /compute?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:00] "[36mGET /compute?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:00] "[36mGET /compute?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\sanja\\x_vectorlabs\\data_analytics_app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 556-405-431
+INFO:data_analytics_app:tablenames
+INFO:data_analytics_app:['dataset']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:17] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:17] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:04:17] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\sanja\\x_vectorlabs\\data_analytics_app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 556-405-431
+INFO:data_analytics_app:['dataset']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:23] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:23] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:23] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:  Unnamed: 0 Gender         DOB  Maths  ...  Biology  Economics  History  Civics
+0       John      M  05-04-1988     55  ...       21         52       89      65
+1     Suresh      M  04-05-1987     75  ...       90         61       58       2
+2     Ramesh      M  25-05-1989     25  ...       95         87       56      74
+3    Jessica      F  12-08-1990     78  ...       54         89       75      45
+4   Jennifer      F  02-09-1989     58  ...       96         77       83      53
+5       Annu      F  05-04-1988     45  ...       55         89       87      52
+6      pooja      F  04-05-1987     55  ...       75         58       64      61
+7     Ritesh      M  25-05-1989     54  ...       25         56       76      87
+8      Farha      F  12-08-1990     55  ...       78         75       63      89
+9     Mukesh      M  02-09-1989     96  ...       58         83       46      77
+
+[10 rows x 11 columns]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:52] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:53] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:53] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:53] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:58] "GET /graph HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:58] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:58] "[36mGET /static/scripts/visualpagescript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:58] "[36mGET /static/css/visualization.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:06:58] "[36mGET /static/scripts/bubbleplot.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:Getting number columns for table: dataset
+INFO:data_analytics_app:[{'name': 'id', 'type': INTEGER(), 'nullable': False, 'default': "nextval('dataset_id_seq'::regclass)", 'autoincrement': True, 'comment': None}, {'name': 'name', 'type': VARCHAR(length=255), 'nullable': False, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'data', 'type': TEXT(), 'nullable': False, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:07:00] "GET /dataset/dataset/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: dataset
+INFO:data_analytics_app:[{'name': 'id', 'type': INTEGER(), 'nullable': False, 'default': "nextval('dataset_id_seq'::regclass)", 'autoincrement': True, 'comment': None}, {'name': 'name', 'type': VARCHAR(length=255), 'nullable': False, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'data', 'type': TEXT(), 'nullable': False, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:07:01] "GET /dataset/dataset/compute HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\sanja\\x_vectorlabs\\data_analytics_app\\routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 556-405-431
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:11] "GET /graph HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:13] "[36mGET /static/css/visualization.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:13] "[36mGET /static/scripts/visualpagescript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:13] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:13] "[36mGET /static/scripts/bubbleplot.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:Getting number columns for table: student_marks_data
+INFO:data_analytics_app:[{'name': 'Unnamed: 0', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Gender', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'DOB', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Maths', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Physics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Chemistry', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'English', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Biology', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Economics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'History', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Civics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:14] "GET /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: student_marks_data
+INFO:data_analytics_app:[{'name': 'Unnamed: 0', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Gender', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'DOB', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Maths', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Physics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Chemistry', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'English', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Biology', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Economics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'History', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Civics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:15] "GET /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:21] "GET /dataset/student_marks_data/plot?selected_column1=Chemistry&selected_column2=Maths HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:25] "POST /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:30] "POST /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:['dataset', 'student_marks_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:36] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:36] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:08:36] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:             Name  HireDate   Salary  SickDaysremaining
+0  Graham Chapman  03/15/14  50000.0                 10
+1     John Cleese  06/01/15  65000.0                  8
+2       Eric Idle  05/12/14  45000.0                 10
+3     Terry Jones  11/01/13  70000.0                  3
+4   Terry Gilliam  08/12/14  48000.0                  7
+5   Michael Palin  05/23/13  66000.0                  8
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:09:14] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data', 'hr_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:09:14] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:09:14] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:09:14] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:  Username; Identifier;First name;Last name
+0               booker12;9012;Rachel;Booker
+1                    grey07;2070;Laura;Grey
+2              johnson81;4081;Craig;Johnson
+3               jenkins46;9346;Mary;Jenkins
+4                  smith79;5079;Jamie;Smith
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:01] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data', 'hr_data', 'users_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:02] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:02] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:02] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:05] "GET /graph HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:06] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:06] "[36mGET /static/css/visualization.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:06] "[36mGET /static/scripts/visualpagescript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:06] "[36mGET /static/scripts/bubbleplot.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:Getting number columns for table: student_marks_data
+INFO:data_analytics_app:[{'name': 'Unnamed: 0', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Gender', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'DOB', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Maths', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Physics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Chemistry', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'English', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Biology', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Economics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'History', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Civics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:08] "GET /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: student_marks_data
+INFO:data_analytics_app:[{'name': 'Unnamed: 0', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Gender', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'DOB', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Maths', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Physics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Chemistry', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'English', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Biology', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Economics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'History', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Civics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:09] "GET /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: hr_data
+INFO:data_analytics_app:[{'name': 'Name', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'HireDate', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Salary', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'SickDaysremaining', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:12] "GET /dataset/hr_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: users_data
+INFO:data_analytics_app:[{'name': 'Username; Identifier;First name;Last name', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:15] "GET /dataset/users_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: users_data
+INFO:data_analytics_app:[{'name': 'Username; Identifier;First name;Last name', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:10:32] "GET /dataset/users_data/compute HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 556-405-431
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:16:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:16:46] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:16:46] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:['dataset']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:16:48] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:16:48] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:16:48] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:  Unnamed: 0 Gender         DOB  Maths  ...  Biology  Economics  History  Civics
+0       John      M  05-04-1988     55  ...       21         52       89      65
+1     Suresh      M  04-05-1987     75  ...       90         61       58       2
+2     Ramesh      M  25-05-1989     25  ...       95         87       56      74
+3    Jessica      F  12-08-1990     78  ...       54         89       75      45
+4   Jennifer      F  02-09-1989     58  ...       96         77       83      53
+5       Annu      F  05-04-1988     45  ...       55         89       87      52
+6      pooja      F  04-05-1987     55  ...       75         58       64      61
+7     Ritesh      M  25-05-1989     54  ...       25         56       76      87
+8      Farha      F  12-08-1990     55  ...       78         75       63      89
+9     Mukesh      M  02-09-1989     96  ...       58         83       46      77
+
+[10 rows x 11 columns]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:10] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:11] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:11] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:11] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:      LotArea  OverallQual  OverallCond  ...  Fireplaces  GarageArea  AboveMedianPrice
+0        8450            7            5  ...           0         548                 1
+1        9600            6            8  ...           1         460                 1
+2       11250            7            5  ...           1         608                 1
+3        9550            7            5  ...           1         642                 0
+4       14260            8            5  ...           1         836                 1
+...       ...          ...          ...  ...         ...         ...               ...
+1455     7917            6            5  ...           1         460                 1
+1456    13175            6            6  ...           2         500                 1
+1457     9042            7            9  ...           2         252                 1
+1458     9717            5            6  ...           0         240                 0
+1459     9937            5            6  ...           0         276                 0
+
+[1460 rows x 11 columns]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:41] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data', 'house_price_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:42] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:42] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:17:42] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:     Class  Alcohol  Malic acid  ...   Hue  diluted wines  Proline    
+0        1    14.23        1.71  ...  1.04           3.92         1065
+1        1    13.20        1.78  ...  1.05           3.40         1050
+2        1    13.16        2.36  ...  1.03           3.17         1185
+3        1    14.37        1.95  ...  0.86           3.45         1480
+4        1    13.24        2.59  ...  1.04           2.93          735
+..     ...      ...         ...  ...   ...            ...          ...
+173      3    13.71        5.65  ...  0.64           1.74          740
+174      3    13.40        3.91  ...  0.70           1.56          750
+175      3    13.27        4.28  ...  0.59           1.56          835
+176      3    13.17        2.59  ...  0.60           1.62          840
+177      3    14.13        4.10  ...  0.61           1.60          560
+
+[178 rows x 14 columns]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:18:18] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data', 'house_price_data', 'wine_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:18:19] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:18:19] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:18:19] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:     sepal length  sepal width  petal length  petal width           class
+0             5.1          3.5           1.4          0.2     Iris-setosa
+1             4.9          3.0           1.4          0.2     Iris-setosa
+2             4.7          3.2           1.3          0.2     Iris-setosa
+3             4.6          3.1           1.5          0.2     Iris-setosa
+4             5.0          3.6           1.4          0.2     Iris-setosa
+..            ...          ...           ...          ...             ...
+145           6.7          3.0           5.2          2.3  Iris-virginica
+146           6.3          2.5           5.0          1.9  Iris-virginica
+147           6.5          3.0           5.2          2.0  Iris-virginica
+148           6.2          3.4           5.4          2.3  Iris-virginica
+149           5.9          3.0           5.1          1.8  Iris-virginica
+
+[150 rows x 5 columns]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:03] "[32mPOST /dataset HTTP/1.1[0m" 302 -
+INFO:data_analytics_app:['dataset', 'student_marks_data', 'house_price_data', 'wine_data', 'iris_data']
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:04] "GET /compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:04] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:04] "[36mGET /static/scripts/formvalidation.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:06] "GET /graph HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:06] "[36mGET /static/css/layout.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:06] "[36mGET /static/css/visualization.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:06] "[36mGET /static/scripts/visualpagescript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:06] "[36mGET /static/scripts/bubbleplot.js HTTP/1.1[0m" 304 -
+INFO:data_analytics_app:Getting number columns for table: student_marks_data
+INFO:data_analytics_app:[{'name': 'Unnamed: 0', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Gender', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'DOB', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Maths', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Physics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Chemistry', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'English', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Biology', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Economics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'History', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Civics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:08] "GET /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: student_marks_data
+INFO:data_analytics_app:[{'name': 'Unnamed: 0', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Gender', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'DOB', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Maths', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Physics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Chemistry', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'English', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Biology', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Economics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'History', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Civics', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:10] "GET /dataset/student_marks_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: house_price_data
+INFO:data_analytics_app:[{'name': 'LotArea', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'OverallQual', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'OverallCond', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'TotalBsmtSF', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'FullBath', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'HalfBath', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'BedroomAbvGr', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'TotRmsAbvGrd', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Fireplaces', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'GarageArea', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'AboveMedianPrice', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:14] "GET /dataset/house_price_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: wine_data
+INFO:data_analytics_app:[{'name': 'Class', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Alcohol', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Malic acid', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Ash', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Alcalinity of ash', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Magnesium', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Total phenols', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Flavanoids', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Nonflavanoid phenols', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Proanthocyanins', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Color intensity', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Hue', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'diluted wines', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'Proline    ', 'type': BIGINT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:17] "GET /dataset/wine_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: iris_data
+INFO:data_analytics_app:[{'name': 'sepal length', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'sepal width', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'petal length', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'petal width', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'class', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:20] "GET /dataset/iris_data/compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:25] "POST /dataset/iris_data/compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:32] "POST /dataset/iris_data/compute HTTP/1.1" 200 -
+INFO:data_analytics_app:Getting number columns for table: iris_data
+INFO:data_analytics_app:[{'name': 'sepal length', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'sepal width', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'petal length', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'petal width', 'type': DOUBLE_PRECISION(precision=53), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}, {'name': 'class', 'type': TEXT(), 'nullable': True, 'default': None, 'autoincrement': False, 'comment': None}]
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:40] "GET /dataset/iris_data/compute HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Feb/2024 12:20:46] "GET /dataset/iris_data/plot?selected_column1=sepal%20length&selected_column2=sepal%20width HTTP/1.1" 200 -
